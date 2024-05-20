@@ -24,6 +24,7 @@ function App() {
   }, [length, numbers, characters, setPassword]);
 
   const copyPassword = useCallback(() => {
+    passwordRef.current?.select();
     window.navigator.clipboard.writeText(password);
   }, [password]);
 
